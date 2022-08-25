@@ -10,8 +10,9 @@
 
 @implementation ComputeModule
 
-RCT_EXPORT_METHOD(compute: (NSNumber *)toCompute) {
-  return [toCompute floatValue] * 2;
+RCT_EXPORT_METHOD(compute: (NSNumber *)toCompute
+                  callback:(RCTResponseSenderBlock)callback) {
+  callback(@[@([toCompute floatValue] * 2)]);
 }
 
 RCT_EXPORT_MODULE(ComputeModuleiOS)

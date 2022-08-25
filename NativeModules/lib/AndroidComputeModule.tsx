@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react';
 import {NativeModules, Text} from 'react-native';
 import {ComputeProps} from './ComputeModule';
+import React from 'react';
 
 export default function AndroidComputeModule(props: ComputeProps) {
   const [computed, setComputed] = useState(0);
